@@ -1,13 +1,13 @@
 services:
-  catalog.api:
-    image: ${DOCKER_REGISTRY-}catalogapi
-    build:
-      context: .
-      dockerfile: Services/Catalog.API/Dockerfile
-
   gateway.api:
     image: ${DOCKER_REGISTRY-}gatewayapi
     build:
       context: .
       dockerfile: Gateway/Gateway.API/Dockerfile
+
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: Services/Catalog.API/Dockerfile
 
